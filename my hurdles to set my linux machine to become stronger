@@ -1,0 +1,533 @@
+katawera@Katawera:~$ cd 
+katawera@Katawera:~$ cd /var/bin/venv
+bash: cd: /var/bin/venv: No such file or directory
+katawera@Katawera:~$ cd Downloads
+katawera@Katawera:~/Downloads$ sudo apt update
+[sudo] password for katawera:                  
+Ign:1 https://linuxmint.mirror.liquidtelecom.com/packages virginia InRelease                                                                                 
+Hit:2 https://linuxmint.mirror.liquidtelecom.com/packages virginia Release                                                                                   
+Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease                                                                                                       
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]                                                                                    
+Hit:5 https://packages.microsoft.com/repos/code stable InRelease                                                                                             
+Hit:6 https://mirror.mwt.me/shiftkey-desktop/deb any InRelease                                                                                               
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates InRelease [128 kB]                                                                                      
+Ign:8 https://apt.packages.shiftkey.dev/ubuntu any InRelease                                                                                                 
+Hit:10 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu jammy InRelease                                                          
+Get:11 http://repository.spotify.com stable InRelease [3,316 B]                                                 
+Get:12 http://archive.ubuntu.com/ubuntu focal-security InRelease [128 kB]                                                                  
+Get:13 http://security.ubuntu.com/ubuntu jammy-security/main i386 Packages [546 kB]                                
+Err:11 http://repository.spotify.com stable InRelease                         
+  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 6224F9941A8AA6D1
+Ign:8 https://apt.packages.shiftkey.dev/ubuntu any InRelease                   
+Hit:14 http://archive.ubuntu.com/ubuntu jammy InRelease                        
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:16 http://archive.ubuntu.com/ubuntu jammy-backports InRelease     
+Get:17 http://archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [1,040 kB]
+Get:18 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1,848 kB]
+Ign:8 https://apt.packages.shiftkey.dev/ubuntu any InRelease                                                                                                 
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3,605 kB]                                                                         
+Get:20 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [299 kB]                                                                         
+Get:21 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [13.3 kB]                                                                  
+Get:22 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [909 kB]                                                                     
+Get:23 http://security.ubuntu.com/ubuntu jammy-security/universe i386 Packages [631 kB]                                                                      
+Get:24 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [179 kB]                                                                     
+Get:25 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [19.4 kB]                                                              
+Err:8 https://apt.packages.shiftkey.dev/ubuntu any InRelease                                                                                                 
+  Bad header line Bad header data [IP: 13.107.246.55 443]
+Get:26 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [555 kB]                                                                           
+Get:27 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [17.7 kB]                                                                    
+Get:28 http://archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [808 kB]                                                                        
+Get:29 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,232 kB]                                                                     
+Get:30 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [28.2 kB]                                                                
+Get:31 http://archive.ubuntu.com/ubuntu focal-security/main i386 Packages [821 kB]                                                                           
+Get:32 http://archive.ubuntu.com/ubuntu focal-security/main amd64 Packages [3,236 kB]                                                                        
+Get:33 http://archive.ubuntu.com/ubuntu focal-security/main Translation-en [477 kB]                                                                          
+Get:34 http://archive.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [14.3 kB]                                                                   
+Get:35 http://archive.ubuntu.com/ubuntu focal-security/universe i386 Packages [681 kB]                                                                       
+Get:36 http://archive.ubuntu.com/ubuntu focal-security/universe amd64 Packages [1,012 kB]                                                                    
+Get:37 http://archive.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [21.5 kB]                                                               
+Get:38 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2,066 kB]                                                                         
+Get:39 http://archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [705 kB]                                                                            
+Get:40 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [358 kB]                                                                           
+Get:41 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [17.9 kB]                                                                    
+Get:42 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1,130 kB]                                                                     
+Get:43 http://archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [736 kB]                                                                        
+Get:44 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [264 kB]                                                                       
+Get:45 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [26.3 kB]                                                                
+q                                                                                                                                                            
+Reading package lists... Done
+W: GPG error: http://repository.spotify.com stable InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 6224F9941A8AA6D1
+E: The repository 'http://repository.spotify.com stable InRelease' is not signed.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+katawera@Katawera:~/Downloads$ sudo apt install python3-venv
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+python3-venv is already the newest version (3.10.6-1~22.04.1).
+0 upgraded, 0 newly installed, 0 to remove and 98 not upgraded.
+katawera@Katawera:~/Downloads$ python3 -m venv Wildcrd
+katawera@Katawera:~/Downloads$ source /Wildcrd/bin/activate
+bash: /Wildcrd/bin/activate: No such file or directory
+katawera@Katawera:~/Downloads$ source Wildcrd/bin/activate
+(Wildcrd) katawera@Katawera:~/Downloads$ pip install mysqlclient
+Collecting mysqlclient
+  Downloading mysqlclient-2.2.4.tar.gz (90 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.4/90.4 KB 277.0 kB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... error
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [24 lines of output]
+      Trying pkg-config --exists mysqlclient
+      Command 'pkg-config --exists mysqlclient' returned non-zero exit status 1.
+      Trying pkg-config --exists mariadb
+      Command 'pkg-config --exists mariadb' returned non-zero exit status 1.
+      Trying pkg-config --exists libmariadb
+      Command 'pkg-config --exists libmariadb' returned non-zero exit status 1.
+      Traceback (most recent call last):
+        File "/home/katawera/Downloads/Wildcrd/lib/python3.10/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 363, in <module>
+          main()
+        File "/home/katawera/Downloads/Wildcrd/lib/python3.10/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 345, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+        File "/home/katawera/Downloads/Wildcrd/lib/python3.10/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 130, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File "/tmp/pip-build-env-claloxgr/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 332, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+        File "/tmp/pip-build-env-claloxgr/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 302, in _get_build_requires
+          self.run_setup()
+        File "/tmp/pip-build-env-claloxgr/overlay/lib/python3.10/site-packages/setuptools/build_meta.py", line 318, in run_setup
+          exec(code, locals())
+        File "<string>", line 155, in <module>
+        File "<string>", line 49, in get_config_posix
+        File "<string>", line 28, in find_package_name
+      Exception: Can not find valid pkg-config name.
+      Specify MYSQLCLIENT_CFLAGS and MYSQLCLIENT_LDFLAGS env vars manually
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+build-essential is already the newest version (12.9ubuntu3).
+build-essential set to manually installed.
+python3-dev is already the newest version (3.10.6-1~22.04.1).
+python3-dev set to manually installed.
+The following additional packages will be installed:
+  libmysqlclient-dev libmysqlclient21 libzstd-dev mysql-common
+The following NEW packages will be installed:
+  default-libmysqlclient-dev libmysqlclient-dev libmysqlclient21 libzstd-dev mysql-common
+0 upgraded, 5 newly installed, 0 to remove and 98 not upgraded.
+Need to get 3,371 kB of archives.
+After this operation, 17.4 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 mysql-common all 5.8+1.0.8 [7,212 B]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libmysqlclient21 amd64 8.0.39-0ubuntu0.22.04.1 [1,301 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libzstd-dev amd64 1.4.8+dfsg-3build1 [401 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libmysqlclient-dev amd64 8.0.39-0ubuntu0.22.04.1 [1,658 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 default-libmysqlclient-dev amd64 1.0.8 [3,586 B]
+Fetched 3,371 kB in 4s (774 kB/s)                      
+Selecting previously unselected package mysql-common.
+(Reading database ... 625786 files and directories currently installed.)
+Preparing to unpack .../mysql-common_5.8+1.0.8_all.deb ...
+Unpacking mysql-common (5.8+1.0.8) ...
+Selecting previously unselected package libmysqlclient21:amd64.
+Preparing to unpack .../libmysqlclient21_8.0.39-0ubuntu0.22.04.1_amd64.deb ...
+Unpacking libmysqlclient21:amd64 (8.0.39-0ubuntu0.22.04.1) ...
+Selecting previously unselected package libzstd-dev:amd64.
+Preparing to unpack .../libzstd-dev_1.4.8+dfsg-3build1_amd64.deb ...
+Unpacking libzstd-dev:amd64 (1.4.8+dfsg-3build1) ...
+Selecting previously unselected package libmysqlclient-dev.
+Preparing to unpack .../libmysqlclient-dev_8.0.39-0ubuntu0.22.04.1_amd64.deb ...
+Unpacking libmysqlclient-dev (8.0.39-0ubuntu0.22.04.1) ...
+Selecting previously unselected package default-libmysqlclient-dev:amd64.
+Preparing to unpack .../default-libmysqlclient-dev_1.0.8_amd64.deb ...
+Unpacking default-libmysqlclient-dev:amd64 (1.0.8) ...
+Setting up mysql-common (5.8+1.0.8) ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Setting up libmysqlclient21:amd64 (8.0.39-0ubuntu0.22.04.1) ...
+Setting up libzstd-dev:amd64 (1.4.8+dfsg-3build1) ...
+Setting up libmysqlclient-dev (8.0.39-0ubuntu0.22.04.1) ...
+Setting up default-libmysqlclient-dev:amd64 (1.0.8) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+(Wildcrd) katawera@Katawera:~/Downloads$ pip install mysqlclient
+Collecting mysqlclient
+  Using cached mysqlclient-2.2.4.tar.gz (90 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Building wheels for collected packages: mysqlclient
+  Building wheel for mysqlclient (pyproject.toml) ... done
+  Created wheel for mysqlclient: filename=mysqlclient-2.2.4-cp310-cp310-linux_x86_64.whl size=124738 sha256=abbffd2c06e4bd7f62e64873d73b92b284637638a8961541a55e6215bae8dfc6
+  Stored in directory: /home/katawera/.cache/pip/wheels/ac/96/ac/2a4d8cb58a4d95de1dffc3f8b0ea42e0e5b63ab97640edbda3
+Successfully built mysqlclient
+Installing collected packages: mysqlclient
+Successfully installed mysqlclient-2.2.4
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo service mysql start
+Failed to start mysql.service: Unit mysql.service is masked.
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo systemctl unmask mysql.service
+Removed /etc/systemd/system/mysql.service.
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo systemctl enable mysql.service
+mysql.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable mysql
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo systemctl start mysql.service
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo systemctl status mysql.service
+● mysql.service - LSB: Start and stop the mysql database server daemon
+     Loaded: loaded (/etc/init.d/mysql; generated)
+     Active: active (exited) since Tue 2024-10-01 07:21:12 EAT; 11s ago
+       Docs: man:systemd-sysv-generator(8)
+    Process: 16341 ExecStart=/etc/init.d/mysql start (code=exited, status=0/SUCCESS)
+        CPU: 4ms
+
+Oct 01 07:21:12 Katawera systemd[1]: Starting LSB: Start and stop the mysql database server daemon...
+Oct 01 07:21:12 Katawera systemd[1]: Started LSB: Start and stop the mysql database server daemon.
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo service mysql start
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo systemctl status mysql.service
+● mysql.service - LSB: Start and stop the mysql database server daemon
+     Loaded: loaded (/etc/init.d/mysql; generated)
+     Active: active (exited) since Tue 2024-10-01 07:21:12 EAT; 59s ago
+       Docs: man:systemd-sysv-generator(8)
+    Process: 16341 ExecStart=/etc/init.d/mysql start (code=exited, status=0/SUCCESS)
+        CPU: 4ms
+
+Oct 01 07:21:12 Katawera systemd[1]: Starting LSB: Start and stop the mysql database server daemon...
+Oct 01 07:21:12 Katawera systemd[1]: Started LSB: Start and stop the mysql database server daemon.
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo mysql_secure_installation
+sudo: mysql_secure_installation: command not found
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo apt install mysql-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libevent-core-2.1-7 libevent-pthreads-2.1-7 libhtml-template-perl libmecab2 mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client-8.0
+  mysql-client-core-8.0 mysql-server-8.0 mysql-server-core-8.0
+Suggested packages:
+  libipc-sharedcache-perl mailx tinyca
+The following NEW packages will be installed:
+  libevent-core-2.1-7 libevent-pthreads-2.1-7 libhtml-template-perl libmecab2 mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client-8.0
+  mysql-client-core-8.0 mysql-server mysql-server-8.0 mysql-server-core-8.0
+0 upgraded, 12 newly installed, 0 to remove and 98 not upgraded.
+Need to get 28.9 MB of archives.
+After this operation, 241 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y 
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client-core-8.0 amd64 8.0.39-0ubuntu0.22.04.1 [2,762 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client-8.0 amd64 8.0.39-0ubuntu0.22.04.1 [22.7 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libevent-core-2.1-7 amd64 2.1.12-stable-1build3 [93.9 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 libevent-pthreads-2.1-7 amd64 2.1.12-stable-1build3 [7,642 B]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmecab2 amd64 0.996-14build9 [199 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-server-core-8.0 amd64 8.0.39-0ubuntu0.22.04.1 [17.6 MB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-server-8.0 amd64 8.0.39-0ubuntu0.22.04.1 [1,437 kB]                                    
+Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libhtml-template-perl all 2.97-1.1 [59.1 kB]                                                         
+Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 mecab-utils amd64 0.996-14build9 [4,850 B]                                                           
+Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 mecab-ipadic all 2.7.0-20070801+main-3 [6,718 kB]                                                   
+Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 mecab-ipadic-utf8 all 2.7.0-20070801+main-3 [4,384 B]                                               
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-server all 8.0.39-0ubuntu0.22.04.1 [9,468 B]                                          
+Fetched 28.9 MB in 24s (1,192 kB/s)                                                                                                                          
+Preconfiguring packages ...
+Selecting previously unselected package mysql-client-core-8.0.
+(Reading database ... 625854 files and directories currently installed.)
+Preparing to unpack .../00-mysql-client-core-8.0_8.0.39-0ubuntu0.22.04.1_amd64.deb ...
+Unpacking mysql-client-core-8.0 (8.0.39-0ubuntu0.22.04.1) ...
+Selecting previously unselected package mysql-client-8.0.
+Preparing to unpack .../01-mysql-client-8.0_8.0.39-0ubuntu0.22.04.1_amd64.deb ...
+Unpacking mysql-client-8.0 (8.0.39-0ubuntu0.22.04.1) ...
+Selecting previously unselected package libevent-core-2.1-7:amd64.
+Preparing to unpack .../02-libevent-core-2.1-7_2.1.12-stable-1build3_amd64.deb ...
+Unpacking libevent-core-2.1-7:amd64 (2.1.12-stable-1build3) ...
+Selecting previously unselected package libevent-pthreads-2.1-7:amd64.
+Preparing to unpack .../03-libevent-pthreads-2.1-7_2.1.12-stable-1build3_amd64.deb ...
+Unpacking libevent-pthreads-2.1-7:amd64 (2.1.12-stable-1build3) ...
+Selecting previously unselected package libmecab2:amd64.
+Preparing to unpack .../04-libmecab2_0.996-14build9_amd64.deb ...
+Unpacking libmecab2:amd64 (0.996-14build9) ...
+Selecting previously unselected package mysql-server-core-8.0.
+Preparing to unpack .../05-mysql-server-core-8.0_8.0.39-0ubuntu0.22.04.1_amd64.deb ...
+Unpacking mysql-server-core-8.0 (8.0.39-0ubuntu0.22.04.1) ...
+Selecting previously unselected package mysql-server-8.0.
+Preparing to unpack .../06-mysql-server-8.0_8.0.39-0ubuntu0.22.04.1_amd64.deb ...
+Unpacking mysql-server-8.0 (8.0.39-0ubuntu0.22.04.1) ...
+Selecting previously unselected package libhtml-template-perl.
+Preparing to unpack .../07-libhtml-template-perl_2.97-1.1_all.deb ...
+Unpacking libhtml-template-perl (2.97-1.1) ...
+Selecting previously unselected package mecab-utils.
+Preparing to unpack .../08-mecab-utils_0.996-14build9_amd64.deb ...
+Unpacking mecab-utils (0.996-14build9) ...
+Selecting previously unselected package mecab-ipadic.
+Preparing to unpack .../09-mecab-ipadic_2.7.0-20070801+main-3_all.deb ...
+Unpacking mecab-ipadic (2.7.0-20070801+main-3) ...
+Selecting previously unselected package mecab-ipadic-utf8.
+Preparing to unpack .../10-mecab-ipadic-utf8_2.7.0-20070801+main-3_all.deb ...
+Unpacking mecab-ipadic-utf8 (2.7.0-20070801+main-3) ...
+Selecting previously unselected package mysql-server.
+Preparing to unpack .../11-mysql-server_8.0.39-0ubuntu0.22.04.1_all.deb ...
+Unpacking mysql-server (8.0.39-0ubuntu0.22.04.1) ...
+Setting up libmecab2:amd64 (0.996-14build9) ...
+Setting up mysql-client-core-8.0 (8.0.39-0ubuntu0.22.04.1) ...
+Setting up libhtml-template-perl (2.97-1.1) ...
+Setting up mecab-utils (0.996-14build9) ...
+Setting up libevent-core-2.1-7:amd64 (2.1.12-stable-1build3) ...
+Setting up mysql-client-8.0 (8.0.39-0ubuntu0.22.04.1) ...
+Setting up libevent-pthreads-2.1-7:amd64 (2.1.12-stable-1build3) ...
+Setting up mecab-ipadic (2.7.0-20070801+main-3) ...
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################| 
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+emitting double-array: 100% |###########################################| 
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################| 
+
+done!
+update-alternatives: using /var/lib/mecab/dic/ipadic to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+Setting up mysql-server-core-8.0 (8.0.39-0ubuntu0.22.04.1) ...
+Setting up mecab-ipadic-utf8 (2.7.0-20070801+main-3) ...
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################| 
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+emitting double-array: 100% |###########################################| 
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################| 
+
+done!
+update-alternatives: using /var/lib/mecab/dic/ipadic-utf8 to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+Setting up mysql-server-8.0 (8.0.39-0ubuntu0.22.04.1) ...
+update-alternatives: using /etc/mysql/mysql.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+mysqld will log errors to /var/log/mysql/error.log
+mysqld is running as pid 16645
+Setting up mysql-server (8.0.39-0ubuntu0.22.04.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+(Wildcrd) katawera@Katawera:~/Downloads$ mysql --version
+mysql  Ver 8.0.39-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo mysql_secure_installation
+
+Securing the MySQL server deployment.
+
+Connecting to MySQL using a blank password.
+The 'validate_password' component is installed on the server.
+The subsequent steps will run with the existing configuration
+of the component.
+
+Skipping password set for root as authentication with auth_socket is used by default.
+If you would like to use password authentication instead, this can be done with the "ALTER_USER" command.
+See https://dev.mysql.com/doc/refman/8.0/en/alter-user.html#alter-user-password-management for more information.
+
+By default, a MySQL installation has an anonymous user,
+allowing anyone to log into MySQL without having to have
+a user account created for them. This is intended only for
+testing, and to make the installation go a bit smoother.
+You should remove them before moving into a production
+environment.
+
+Remove anonymous users? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+
+Normally, root should only be allowed to connect from
+'localhost'. This ensures that someone cannot guess at
+the root password from the network.
+
+Disallow root login remotely? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+By default, MySQL comes with a database named 'test' that
+anyone can access. This is also intended only for testing,
+and should be removed before moving into a production
+environment.
+
+
+Remove test database and access to it? (Press y|Y for Yes, any other key for No) : y
+ - Dropping test database...
+Success.
+
+ - Removing privileges on test database...
+Success.
+
+Reloading the privilege tables will ensure that all changes
+made so far will take effect immediately.
+
+Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+All done! 
+(Wildcrd) katawera@Katawera:~/Downloads$ import MySQLdb
+hjimport-im6.q16: attempt to perform an operation not allowed by the security policy `PS' @ error/constitute.c/IsCoderAuthorized/426.
+(Wildcrd) katawera@Katawera:~/Downloads$ import MySQLdb
+import-im6.q16: attempt to perform an operation not allowed by the security policy `PS' @ error/constitute.c/IsCoderAuthorized/426.
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo find / -name policy.xml
+find: ‘/run/user/1000/doc’: Permission denied
+find: ‘/run/user/1000/gvfs’: Permission denied
+/etc/ImageMagick-6/policy.xml
+/timeshift/snapshots/2024-09-30_15-00-05/localhost/etc/ImageMagick-6/policy.xml
+/timeshift/snapshots/2024-09-27_09-00-06/localhost/etc/ImageMagick-6/policy.xml
+/timeshift/snapshots/2024-09-28_11-00-02/localhost/etc/ImageMagick-6/policy.xml
+/timeshift/snapshots/2024-09-25_20-00-02/localhost/etc/ImageMagick-6/policy.xml
+
+/timeshift/snapshots/2024-09-29_14-00-02/localhost/etc/ImageMagick-6/policy.xml
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo nano /etc/ImageMagick-6/policy.xml
+(Wildcrd) katawera@Katawera:~/Downloads$ import MySQLdb
+(Wildcrd) katawera@Katawera:~/Downloads$ db = MySQLdb.connect(
+    host="localhost",
+    user="yourusername",
+    passwd="yourpassword",
+    db="yourdatabase"
+)
+
+cursor = db.cursor()
+cursor.execute("SELECT VERSION()")
+data = cursor.fetchone()
+print("Database version : %s " % data)
+db.close()
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `)'
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `"SELECT VERSION()"'
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `"Database version : %s "'
+> )q
+bash: syntax error near unexpected token `)'
+(Wildcrd) katawera@Katawera:~/Downloads$ db = MySQLdb.connect( host="localhost",user="Arcane",passwd="24242",db="arcanedatabase")
+bash: syntax error near unexpected token `('
+(Wildcrd) katawera@Katawera:~/Downloads$ db = MySQLdb.connect (host="localhost",user="Arcane",passwd="24242",db="arcanedatabase")
+bash: syntax error near unexpected token `('
+(Wildcrd) katawera@Katawera:~/Downloads$ db = MySQLdb.connect (host="localhost", user="Arcane", passwd="24242", db="arcanedatabase")
+bash: syntax error near unexpected token `('
+(Wildcrd) katawera@Katawera:~/Downloads$ pip install mysqlclient
+Requirement already satisfied: mysqlclient in ./Wildcrd/lib/python3.10/site-packages (2.2.4)
+(Wildcrd) katawera@Katawera:~/Downloads$ mysql -u ArcaneWildcrd -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'ArcaneWildcrd'@'localhost' (using password: YES)
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo mysql-u root -p
+sudo: mysql-u: command not found
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11
+Server version: 8.0.39-0ubuntu0.22.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE DATABASE ArcaneWildcrdDatabase; CREATE USER 'Arcane242'@'localhost' IDENTIFIED BY 'arcane wildcrd242'; GRANT ALL PRIVILEGES ON ArcaneWildcrdDatabase.* TO 'Arcane242'@'localhost'; FLUSH PRIVILEGES; EXIT;
+Query OK, 1 row affected (0.82 sec)
+
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+ERROR 1410 (42000): You are not allowed to create a user with GRANT
+Query OK, 0 rows affected (0.10 sec)
+
+Bye
+(Wildcrd) katawera@Katawera:~/Downloads$ sudo mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 12
+Server version: 8.0.39-0ubuntu0.22.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE DATABASE ArcaneWildcrdDatabase;
+ERROR 1007 (HY000): Can't create database 'ArcaneWildcrdDatabase'; database exists
+mysql> CREATE USER 'Arcane242'@'localhost' IDENTIFIED BY 'arcane wildcrd242';
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+mysql> SHOW VARIABLES LIKE 'validate_password%';
++-------------------------------------------------+--------+
+| Variable_name                                   | Value  |
++-------------------------------------------------+--------+
+| validate_password.changed_characters_percentage | 0      |
+| validate_password.check_user_name               | ON     |
+| validate_password.dictionary_file               |        |
+| validate_password.length                        | 8      |
+| validate_password.mixed_case_count              | 1      |
+| validate_password.number_count                  | 1      |
+| validate_password.policy                        | MEDIUM |
+| validate_password.special_char_count            | 1      |
++-------------------------------------------------+--------+
+8 rows in set (0.66 sec)
+
+mysql> CREATE USER 'Arcane242'@'localhost' IDENTIFIED BY '@arcane1';
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+mysql> CREATE USER 'Arcane242'@'localhost' IDENTIFIED BY '@aArcane1';
+Query OK, 0 rows affected (0.16 sec)
+
+mysql> GRANT ALL PRIVILEGES ON ArcaneWildcrdDatabase.* TO 'Arcane242'@'localhost';
+Query OK, 0 rows affected (0.15 sec)
+
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> EXIT;
+Bye
