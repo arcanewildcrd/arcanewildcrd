@@ -1,0 +1,413 @@
+sudo mysql -u root -p
+[sudo] password for katawera:                  
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.39-0ubuntu0.22.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>  USE ArcaneWildcrdDatabase
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SHOW TABLES; 
++---------------------------------+
+| Tables_in_ArcaneWildcrdDatabase |
++---------------------------------+
+| EMPLOYESS                       |
+| Employee                        |
+| Employees                       |
++---------------------------------+
+3 rows in set (0.01 sec)
+
+mysql> use EMLOYESS;
+ERROR 1049 (42000): Unknown database 'EMLOYESS'
+mysql> SELECT * FROM EMPLOYESS;
++-------+---------+---------+--------+--------+
+| EmpNo | EName   | Job     | Salary | Deptno |
++-------+---------+---------+--------+--------+
+| E001  | NULL    | Clerk   |  40000 |     20 |
+| E002  | Agaba   | Manager |  16000 |     30 |
+| E003  | NULL    | NULL    |  20000 |     20 |
+| E004  | Timo    | Clerk   |  40000 |     30 |
+| E005  | Simon   | Manager |  60000 |     40 |
+| E006  | Mark    | Manager |  45000 |     10 |
+| E007  | Solomon | Teacher |  30000 |     30 |
++-------+---------+---------+--------+--------+
+7 rows in set (0.00 sec)
+
+mysql> select EmpNo, EName, Job, Salary, Salary*1.14 as Sal_Incre from Job'Manager';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Manager'' at line 1
+mysql> select EmpNo, EName, Job, Salary, Salary*1.14 as Sal_Incre from Job 'Manager';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Manager'' at line 1
+mysql> select EmpNo, EName, Job, Salary, Salary*1.14 as Sal_Incre from Job='Manager';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='Manager'' at line 1
+mysql> select EmpNo, EName, Job, Salary, Salary*1.14 as Sal_Incre from EMPLOYESS where Job 'Manager';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Manager'' at line 1
+mysql> select EmpNo, EName, Job, Salary, Salary*1.14 as Sal_Incre from EMPLOYESS where Job='Manager';
++-------+-------+---------+--------+-----------+
+| EmpNo | EName | Job     | Salary | Sal_Incre |
++-------+-------+---------+--------+-----------+
+| E002  | Agaba | Manager |  16000 |  18240.00 |
+| E005  | Simon | Manager |  60000 |  68400.00 |
+| E006  | Mark  | Manager |  45000 |  51300.00 |
++-------+-------+---------+--------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> select * from EMPLOYESS where Job!='Manager'
+    -> exit;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'exit' at line 2
+mysql> select * from EMPLOYESS where Job!='Manager';
++-------+---------+---------+--------+--------+
+| EmpNo | EName   | Job     | Salary | Deptno |
++-------+---------+---------+--------+--------+
+| E001  | NULL    | Clerk   |  40000 |     20 |
+| E004  | Timo    | Clerk   |  40000 |     30 |
+| E007  | Solomon | Teacher |  30000 |     30 |
++-------+---------+---------+--------+--------+
+3 rows in set (0.00 sec)
+
+mysql> select * from EMPLOYESS where Job in( 'Clerk', 'Teacher');
++-------+---------+---------+--------+--------+
+| EmpNo | EName   | Job     | Salary | Deptno |
++-------+---------+---------+--------+--------+
+| E001  | NULL    | Clerk   |  40000 |     20 |
+| E004  | Timo    | Clerk   |  40000 |     30 |
+| E007  | Solomon | Teacher |  30000 |     30 |
++-------+---------+---------+--------+--------+
+3 rows in set (0.08 sec)
+
+mysql> select * from EMPLOYESS where Job not in( 'Clerk', 'Teacher');
++-------+-------+---------+--------+--------+
+| EmpNo | EName | Job     | Salary | Deptno |
++-------+-------+---------+--------+--------+
+| E002  | Agaba | Manager |  16000 |     30 |
+| E005  | Simon | Manager |  60000 |     40 |
+| E006  | Mark  | Manager |  45000 |     10 |
++-------+-------+---------+--------+--------+
+3 rows in set (0.00 sec)
+
+mysql> select * from EMPLOYESS where Salary between 16000 and 40000;
++-------+---------+---------+--------+--------+
+| EmpNo | EName   | Job     | Salary | Deptno |
++-------+---------+---------+--------+--------+
+| E001  | NULL    | Clerk   |  40000 |     20 |
+| E002  | Agaba   | Manager |  16000 |     30 |
+| E003  | NULL    | NULL    |  20000 |     20 |
+| E004  | Timo    | Clerk   |  40000 |     30 |
+| E007  | Solomon | Teacher |  30000 |     30 |
++-------+---------+---------+--------+--------+
+5 rows in set (0.00 sec)
+
+mysql> select * from EMPLOYESS where Salary not between 16000 and 40000;
++-------+-------+---------+--------+--------+
+| EmpNo | EName | Job     | Salary | Deptno |
++-------+-------+---------+--------+--------+
+| E005  | Simon | Manager |  60000 |     40 |
+| E006  | Mark  | Manager |  45000 |     10 |
++-------+-------+---------+--------+--------+
+2 rows in set (0.01 sec)
+
+mysql> select * from EMPLOYESS;
++-------+---------+---------+--------+--------+
+| EmpNo | EName   | Job     | Salary | Deptno |
++-------+---------+---------+--------+--------+
+| E001  | NULL    | Clerk   |  40000 |     20 |
+| E002  | Agaba   | Manager |  16000 |     30 |
+| E003  | NULL    | NULL    |  20000 |     20 |
+| E004  | Timo    | Clerk   |  40000 |     30 |
+| E005  | Simon   | Manager |  60000 |     40 |
+| E006  | Mark    | Manager |  45000 |     10 |
+| E007  | Solomon | Teacher |  30000 |     30 |
++-------+---------+---------+--------+--------+
+7 rows in set (0.00 sec)
+
+mysql> select * from EMPLOYESS where EName like '%n;
+    '> 
+    '> exit;
+    '> exit;
+    '> 
+    '> EXIT;
+    '> EXIT
+    '> exit;
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> 
+    '> exit;
+    '> select * from EMPLOYESS where EName like '%n;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%n' at line 34
+mysql> select * from EMPLOYESS where EName like '%n';
++-------+---------+---------+--------+--------+
+| EmpNo | EName   | Job     | Salary | Deptno |
++-------+---------+---------+--------+--------+
+| E005  | Simon   | Manager |  60000 |     40 |
+| E007  | Solomon | Teacher |  30000 |     30 |
++-------+---------+---------+--------+--------+
+2 rows in set (0.00 sec)
+
+mysql> show databases
+    -> exit;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'exit' at line 2
+mysql> show databases;
++-----------------------+
+| Database              |
++-----------------------+
+| ArcaneWildcrdDatabase |
+| information_schema    |
+| mysql                 |
+| performance_schema    |
+| sys                   |
++-----------------------+
+5 rows in set (0.02 sec)
+
+mysql> describe Employee;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| EmpNo  | varchar(10) | YES  |     | NULL    |       |
+| EName  | varchar(40) | YES  |     | NULL    |       |
+| Job    | varchar(20) | YES  |     | NULL    |       |
+| Salary | int         | YES  |     | NULL    |       |
+| Deptno | int         | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+5 rows in set (0.17 sec)
+
+mysql> select * from Employee;
++-------+---------+---------+--------+--------+
+| EmpNo | EName   | Job     | Salary | Deptno |
++-------+---------+---------+--------+--------+
+| E001  | NULL    | Clerk   |  40000 |     20 |
+| E002  | Agaba   | Manager |  16000 |     30 |
+| E003  | NULL    | NULL    |  20000 |     20 |
+| E004  | Timo    | Clerk   |  40000 |     30 |
+| E005  | Simon   | Manager |  60000 |     40 |
+| E006  | Mark    | Manager |  45000 |     10 |
+| E007  | Solomon | Teacher |  30000 |     30 |
++-------+---------+---------+--------+--------+
+7 rows in set (0.00 sec)
+
+mysql> select EmpNo, EName, Job from Employee;
++-------+---------+---------+
+| EmpNo | EName   | Job     |
++-------+---------+---------+
+| E001  | NULL    | Clerk   |
+| E002  | Agaba   | Manager |
+| E003  | NULL    | NULL    |
+| E004  | Timo    | Clerk   |
+| E005  | Simon   | Manager |
+| E006  | Mark    | Manager |
+| E007  | Solomon | Teacher |
++-------+---------+---------+
+7 rows in set (0.01 sec)
+
+mysql> select * frpm Employee where Job='Manager';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'frpm Employee where Job='Manager'' at line 1
+mysql> select * from Employee where Job='Manager';
++-------+-------+---------+--------+--------+
+| EmpNo | EName | Job     | Salary | Deptno |
++-------+-------+---------+--------+--------+
+| E002  | Agaba | Manager |  16000 |     30 |
+| E005  | Simon | Manager |  60000 |     40 |
+| E006  | Mark  | Manager |  45000 |     10 |
++-------+-------+---------+--------+--------+
+3 rows in set (0.00 sec)
+
+mysql> select EmpNo, EName, Job from Employee where Job='Clerk';
++-------+-------+-------+
+| EmpNo | EName | Job   |
++-------+-------+-------+
+| E001  | NULL  | Clerk |
+| E004  | Timo  | Clerk |
++-------+-------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select EmpNo, EName, Job from Employee where EName>'Simon';
++-------+---------+---------+
+| EmpNo | EName   | Job     |
++-------+---------+---------+
+| E004  | Timo    | Clerk   |
+| E007  | Solomon | Teacher |
++-------+---------+---------+
+2 rows in set (0.00 sec)
+
+mysql> select distinct Job from Employee;
++---------+
+| Job     |
++---------+
+| Clerk   |
+| Manager |
+| NULL    |
+| Teacher |
++---------+
+4 rows in set (0.05 sec)
+
+mysql> select EmpNo, EName, Job from Employee where Job not in('Manager', 'Clerk');
++-------+---------+---------+
+| EmpNo | EName   | Job     |
++-------+---------+---------+
+| E007  | Solomon | Teacher |
++-------+---------+---------+
+1 row in set (0.01 sec)
+
+mysql> select EmpNo, Job, Salary, Salary+20000 as New_Salary from Employee;
++-------+---------+--------+------------+
+| EmpNo | Job     | Salary | New_Salary |
++-------+---------+--------+------------+
+| E001  | Clerk   |  40000 |      60000 |
+| E002  | Manager |  16000 |      36000 |
+| E003  | NULL    |  20000 |      40000 |
+| E004  | Clerk   |  40000 |      60000 |
+| E005  | Manager |  60000 |      80000 |
+| E006  | Manager |  45000 |      65000 |
+| E007  | Teacher |  30000 |      50000 |
++-------+---------+--------+------------+
+7 rows in set (0.01 sec)
+
+mysql> select EmpNo, Job, Salary, Salary+20000 as New_Salary from Employee where Job='Clerk';
++-------+-------+--------+------------+
+| EmpNo | Job   | Salary | New_Salary |
++-------+-------+--------+------------+
+| E001  | Clerk |  40000 |      60000 |
+| E004  | Clerk |  40000 |      60000 |
++-------+-------+--------+------------+
+2 rows in set (0.01 sec)
+
+mysql> select * from EMPLOYESS where EName like 'A%' or 'M%';
++-------+-------+---------+--------+--------+
+| EmpNo | EName | Job     | Salary | Deptno |
++-------+-------+---------+--------+--------+
+| E002  | Agaba | Manager |  16000 |     30 |
++-------+-------+---------+--------+--------+
+1 row in set, 1 warning (0.05 sec)
+
+mysql> select * from EMPLOYESS where EName like (____);
+ERROR 1054 (42S22): Unknown column '____' in 'where clause'
+mysql> select * from EMPLOYESS where EName in (____);
+ERROR 1054 (42S22): Unknown column '____' in 'where clause'
+mysql> select * from Employee where EName like 'A%' or 'M%';
++-------+-------+---------+--------+--------+
+| EmpNo | EName | Job     | Salary | Deptno |
++-------+-------+---------+--------+--------+
+| E002  | Agaba | Manager |  16000 |     30 |
++-------+-------+---------+--------+--------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> select EName from Employee where in (____);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'in (____)' at line 1
+mysql> select EName from Employee where Ename in (____);
+ERROR 1054 (42S22): Unknown column '____' in 'where clause'
+mysql> select EName from Employee where Ename in ('____');
+Empty set (0.00 sec)
+
+mysql> select EName from Employee where in (____);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'in (____)' at line 1
+mysql> select EName from Employee where in(____);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'in(____)' at line 1
+mysql> select EName from Employee where Ename in(____);
+ERROR 1054 (42S22): Unknown column '____' in 'where clause'
+mysql> select * from Employee where EName in(____);
+ERROR 1054 (42S22): Unknown column '____' in 'where clause'
+mysql> select EmpNo, Job, Salary, Salary*0.82 as New_Salary from Employee;
++-------+---------+--------+------------+
+| EmpNo | Job     | Salary | New_Salary |
++-------+---------+--------+------------+
+| E001  | Clerk   |  40000 |   32800.00 |
+| E002  | Manager |  16000 |   13120.00 |
+| E003  | NULL    |  20000 |   16400.00 |
+| E004  | Clerk   |  40000 |   32800.00 |
+| E005  | Manager |  60000 |   49200.00 |
+| E006  | Manager |  45000 |   36900.00 |
+| E007  | Teacher |  30000 |   24600.00 |
++-------+---------+--------+------------+
+7 rows in set (0.00 sec)
+
+mysql> select EmpNo, Job, Salary, Salary*0.82 as New_Salary from Employee Job='Manager';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='Manager'' at line 1
+mysql> select EmpNo, Job, Salary, Salary*0.82 as New_Salary from Employee where Job='Manager';
++-------+---------+--------+------------+
+| EmpNo | Job     | Salary | New_Salary |
++-------+---------+--------+------------+
+| E002  | Manager |  16000 |   13120.00 |
+| E005  | Manager |  60000 |   49200.00 |
+| E006  | Manager |  45000 |   36900.00 |
++-------+---------+--------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from Employee where EName like'____';
++-------+-------+---------+--------+--------+
+| EmpNo | EName | Job     | Salary | Deptno |
++-------+-------+---------+--------+--------+
+| E004  | Timo  | Clerk   |  40000 |     30 |
+| E006  | Mark  | Manager |  45000 |     10 |
++-------+-------+---------+--------+--------+
+2 rows in set (0.00 sec)
+
+mysql> select * from Employee where EName like 'A%' or |'M%';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '|'M%'' at line 1
+mysql> select * from Employee where EName like 'A%' or |'M%';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '|'M%'' at line 1
+mysql> select * from Employee where EName like 'A%' or EName like 'M%';
++-------+-------+---------+--------+--------+
+| EmpNo | EName | Job     | Salary | Deptno |
++-------+-------+---------+--------+--------+
+| E002  | Agaba | Manager |  16000 |     30 |
+| E006  | Mark  | Manager |  45000 |     10 |
++-------+-------+---------+--------+--------+
+2 rows in set (0.00 sec)
+
+mysql> select EmpNo, Job, Salary, Salary-(Salary*0.82) as New_Salary from Employee where Job='Manager';
++-------+---------+--------+------------+
+| EmpNo | Job     | Salary | New_Salary |
++-------+---------+--------+------------+
+| E002  | Manager |  16000 |    2880.00 |
+| E005  | Manager |  60000 |   10800.00 |
+| E006  | Manager |  45000 |    8100.00 |
++-------+---------+--------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from Employee where DeptNo in (20, 30, 10)
+    -> exit;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'exit' at line 2
+mysql> select * from Employee where DeptNo in (20, 30, 10);
++-------+---------+---------+--------+--------+
+| EmpNo | EName   | Job     | Salary | Deptno |
++-------+---------+---------+--------+--------+
+| E001  | NULL    | Clerk   |  40000 |     20 |
+| E002  | Agaba   | Manager |  16000 |     30 |
+| E003  | NULL    | NULL    |  20000 |     20 |
+| E004  | Timo    | Clerk   |  40000 |     30 |
+| E006  | Mark    | Manager |  45000 |     10 |
+| E007  | Solomon | Teacher |  30000 |     30 |
++-------+---------+---------+--------+--------+
+6 rows in set (0.00 sec)
+
+mysql> 
