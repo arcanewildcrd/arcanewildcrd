@@ -1,4 +1,4 @@
-## Hi there 👋
+## Hi there 👋....just a novice programmer tryna get by in the cyber universe, any help is much appreciated..arigatou gozaimasu
 
 <!--
 **arcanewildcrd/arcanewildcrd** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
