@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - UCU Eats</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation (same for all pages) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">UCU Eats 🔥</div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link active">Menu</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="vendor.html" class="nav-link btn-primary">Vendor Apply</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menu Hero -->
+  <section class="menu-hero">
+    <div class="container">
+      <h1 class="page-title">Our Menu</h1>
+      <p class="page-subtitle">Fresh. Fast. Affordable. Delivered to your hostel!</p>
+    </div>
+  </section>
+
+  <!-- Filter Buttons -->
+  <section class="menu-filter">
+    <div class="container">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="chapati">Chapati</button>
+        <button class="filter-btn" data-category="role">Rolex</button>
+        <button class="filter-btn" data-category="snacks">Snacks</button>
+        <button class="filter-btn" data-category="drinks">Drinks</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Items -->
+  <section class="menu-items">
+    <div class="container">
+      <div class="menu-grid" id="menuGrid">
+        <!-- Menu items loaded by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 UCU Eats. Mukono's #1 Food Delivery. Order now!</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

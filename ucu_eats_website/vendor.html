@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Application - UCU Eats</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">UCU Eats 🔥</div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="vendor.html" class="nav-link active btn-primary">Vendor Apply</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Vendor Hero -->
+  <section class="vendor-hero">
+    <div class="container">
+      <h1 class="page-title">Vendor Application</h1>
+      <p class="page-subtitle">Join UCU Eats - Mukono's #1 Food Delivery Platform</p>
+    </div>
+  </section>
+
+  <!-- Vendor Form -->
+  <section class="vendor-form-section">
+    <div class="container">
+      <div class="vendor-form-container">
+        <form id="vendorForm" class="vendor-form">
+          <!-- 1. Vendor Name/Logo (REQUIRED) -->
+          <div class="form-group">
+            <label class="form-label">1. Vendor Name or Logo Description <span class="required">*</span></label>
+            <textarea 
+              name="vendorName" 
+              placeholder="e.g. 'Chapati Queen', 'Mama Nakato Rolex', 'Fresh Fruit Palace'" 
+              maxlength="200"
+              required
+            ></textarea>
+            <div class="char-count">0/200</div>
+          </div>
+
+          <!-- 2. Tagline (3 Sentences Max - REQUIRED) -->
+          <div class="form-group">
+            <label class="form-label label-green">2. Tagline (3 sentences maximum) <span class="required">*</span></label>
+            <textarea 
+              name="tagline" 
+              placeholder="e.g. 'Fresh chapatis daily. Best Rolex in Mukono. Fast hostel delivery!'" 
+              maxlength="300"
+              required
+            ></textarea>
+            <div class="char-count">0/300</div>
+          </div>
+
+          <!-- 3. About Section (REQUIRED) -->
+          <div class="form-group">
+            <label class="form-label">3. About Your Business <span class="required">*</span></label>
+            <textarea 
+              name="about" 
+              placeholder="What makes your business special? Quality ingredients? Fast service? Student favorites? Unique recipes?" 
+              maxlength="500"
+              required
+            ></textarea>
+            <div class="char-count">0/500</div>
+          </div>
+
+          <!-- 4. Services/Menu Items (REQUIRED) -->
+          <div class="form-group">
+            <label class="form-label label-green">4. Services / Menu Items <span class="required">*</span></label>
+            <textarea 
+              name="services" 
+              placeholder="e.g.&#10;Chapati - UGX 1,000&#10;Rolex - UGX 2,500&#10;Chips - UGX 3,000&#10;Tea - UGX 500&#10;..."
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <!-- 5. Contact Information (REQUIRED) -->
+          <div class="form-group">
+            <label class="form-label">5. Contact Information <span class="required">*</span></label>
+            <div class="input-row">
+              <input type="email" name="email" placeholder="vendor@ucueats.com" required>
+              <input type="tel" name="phone" placeholder="077x-xxx-xxx" required>
+            </div>
+          </div>
+
+          <!-- CTA Button (Design F/UI 10% Mark) -->
+          <button type="submit" class="cta-button">
+            <span>Apply to Join UCU Eats</span>
+            <div class="button-glow"></div>
+          </button>
+        </form>
+      </div>
+
+      <div class="vendor-info">
+        <h3>📋 Application Requirements</h3>
+        <ul>
+          <li>✅ Vendor name/logo description</li>
+          <li>✅ Tagline (3 sentences maximum)</li>
+          <li>✅ About section</li>
+          <li>✅ Services/menu items list</li>
+          <li>✅ Contact email & phone</li>
+        </ul>
+        <p class="info-text">We'll review within 48 hours and contact you!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 UCU Eats. Mukono University Food Delivery.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Character counters
+    document.querySelectorAll('textarea[maxlength]').forEach(textarea => {
+      const counter = textarea.nextElementSibling;
+      textarea.addEventListener('input', () => {
+        counter.textContent = `${textarea.value.length}/${textarea.maxLength}`;
+      });
+    });
+
+    // Form submission with success state
+    document.getElementById('vendorForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitBtn = document.querySelector('.cta-button');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<span>Submitting...</span>';
+      submitBtn.disabled = true;
+
+      // Simulate submission success
+      setTimeout(() => {
+        this.innerHTML = `
+          <div class="success-message">
+            <h2>✅ Application Submitted!</h2>
+            <p>Thank you for applying to UCU Eats. Our team will review your application within 48 hours and contact you via email.</p>
+            <button onclick="location.reload()" class="cta-button secondary">Submit Another</button>
+          </div>
+        `;
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
