@@ -1,0 +1,9 @@
+{
+  "menu": [
+    { "id": 1, "name": "Classic Rolex", "price": 2500, "category": "Rolex" }
+  ],
+  "orders": [],
+  "users": [
+    { "id": 1, "email": "student@ucu.ac.ug", "role": "student" }
+  ]
+}
