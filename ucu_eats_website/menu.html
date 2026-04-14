@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu - UCU Eats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation (same for all pages) -->
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo">UCU Eats 🔥</div>
@@ -16,7 +18,8 @@
         <li><a href="menu.html" class="nav-link active">Menu</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <li><a href="vendor.html" class="nav-link btn-primary">Vendor Apply</a></li>
+        <li><a href="vendor.html" class="nav-link">Vendor Deets</a></li>
+        <li><a href="#" class="nav-link btn-primary">Vendor Page</a></li>
       </ul>
       <div class="hamburger">
         <span></span><span></span><span></span>
@@ -27,8 +30,8 @@
   <!-- Menu Hero -->
   <section class="menu-hero">
     <div class="container">
-      <h1 class="page-title">Our Menu</h1>
-      <p class="page-subtitle">Fresh. Fast. Affordable. Delivered to your hostel!</p>
+      <h1 class="page-title">The Menu</h1>
+      <p class="page-subtitle">Fresh. Fast. Affordable. Delivered to your hostel or AROUND CAMPUS! 🍽️</p>
     </div>
   </section>
 
@@ -36,11 +39,11 @@
   <section class="menu-filter">
     <div class="container">
       <div class="filter-buttons">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="chapati">Chapati</button>
-        <button class="filter-btn" data-category="role">Rolex</button>
-        <button class="filter-btn" data-category="snacks">Snacks</button>
-        <button class="filter-btn" data-category="drinks">Drinks</button>
+        <button class="filter-btn active" data-category="all">All Items</button>
+        <button class="filter-btn" data-category="chapati">🥞 Chapati</button>
+        <button class="filter-btn" data-category="rolex">🌯 Rolex</button>
+        <button class="filter-btn" data-category="snacks">🍟 Snacks</button>
+        <button class="filter-btn" data-category="drinks">☕ Drinks</button>
       </div>
     </div>
   </section>
@@ -49,7 +52,93 @@
   <section class="menu-items">
     <div class="container">
       <div class="menu-grid" id="menuGrid">
-        <!-- Menu items loaded by JavaScript -->
+        <!-- Chapati Items -->
+        <div class="menu-card" data-category="chapati">
+          <div class="menu-icon">🥞</div>
+          <h3>Classic Chapati</h3>
+          <p>Freshly made daily, soft and golden</p>
+          <span class="price">UGX 1,000</span>
+        </div>
+
+        <div class="menu-card" data-category="chapati">
+          <div class="menu-icon">🥞</div>
+          <h3>Double Chapati</h3>
+          <p>Two soft chapatis, perfect for sharing</p>
+          <span class="price">UGX 1,800</span>
+        </div>
+
+        <div class="menu-card" data-category="chapati">
+          <div class="menu-icon">🥞</div>
+          <h3>Chapati with Sauce</h3>
+          <p>Served with your choice of sauce</p>
+          <span class="price">UGX 2,000</span>
+        </div>
+
+        <!-- Rolex Items -->
+        <div class="menu-card" data-category="rolex">
+          <div class="menu-icon">🌯</div>
+          <h3>Classic Rolex</h3>
+          <p>Chapati + eggs + cabbage</p>
+          <span class="price">UGX 2,000</span>
+        </div>
+
+        <div class="menu-card" data-category="rolex">
+          <div class="menu-icon">🌯</div>
+          <h3>Special Rolex</h3>
+          <p>With tomatoes, onions & fresh veggies</p>
+          <span class="price">UGX 3,000</span>
+        </div>
+
+        <div class="menu-card" data-category="rolex">
+          <div class="menu-icon">🌯</div>
+          <h3>Deluxe Rolex</h3>
+          <p>Extra eggs, cheese & premium toppings</p>
+          <span class="price">UGX 3,500</span>
+        </div>
+
+        <!-- Snacks -->
+        <div class="menu-card" data-category="snacks">
+          <div class="menu-icon">🍟</div>
+          <h3>Crispy Chips</h3>
+          <p>Perfectly fried, served hot</p>
+          <span class="price">UGX 3,000</span>
+        </div>
+
+        <div class="menu-card" data-category="snacks">
+          <div class="menu-icon">🥚</div>
+          <h3>Samosas (3pcs)</h3>
+          <p>Crispy pastry with savory filling</p>
+          <span class="price">UGX 2,000</span>
+        </div>
+
+        <div class="menu-card" data-category="snacks">
+          <div class="menu-icon">🌭</div>
+          <h3>Sausage & Chips</h3>
+          <p>Grilled sausage with crispy chips</p>
+          <span class="price">UGX 4,500</span>
+        </div>
+
+        <!-- Drinks -->
+        <div class="menu-card" data-category="drinks">
+          <div class="menu-icon">☕</div>
+          <h3>Hot Tea</h3>
+          <p>Freshly brewed Ugandan tea</p>
+          <span class="price">UGX 500</span>
+        </div>
+
+        <div class="menu-card" data-category="drinks">
+          <div class="menu-icon">🥤</div>
+          <h3>Soda (500ml)</h3>
+          <p>Coca-Cola, Fanta, Sprite</p>
+          <span class="price">UGX 1,500</span>
+        </div>
+
+        <div class="menu-card" data-category="drinks">
+          <div class="menu-icon">🧃</div>
+          <h3>Fresh Juice</h3>
+          <p>Passion, mango, or orange</p>
+          <span class="price">UGX 2,500</span>
+        </div>
       </div>
     </div>
   </section>
@@ -57,10 +146,35 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© 2026 UCU Eats. Mukono's #1 Food Delivery. Order now!</p>
+      <p>© 2026 <span>UCU Eats</span> — Mukono's #1 Food Delivery <span>Arigato Asakusa</span> 🔥</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Menu filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const menuCards = document.querySelectorAll('.menu-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+
+        const category = btn.dataset.category;
+
+        menuCards.forEach(card => {
+          if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+            card.style.animation = 'fadeInUp 0.5s ease';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>

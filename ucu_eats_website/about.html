@@ -4,46 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - UCU Eats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar"><!-- Same nav --></nav>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">UCU Eats 🔥</div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="vendor.html" class="nav-link">Vendor Deets</a></li>
+        <li><a href="#" class="nav-link btn-primary">Vendor Page</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
 
+  <!-- About Hero -->
   <section class="about-hero">
     <div class="container">
       <h1 class="page-title">About UCU Eats</h1>
-      <p class="page-subtitle">Mukono's favorite food delivery service</p>
+      <p class="page-subtitle">Mukono's favorite food delivery service 🍽️</p>
     </div>
   </section>
 
+  <!-- About Content -->
   <section class="about-content">
     <div class="container">
       <div class="about-grid">
         <div class="about-text">
           <h2>Fast Food for Busy Students</h2>
           <p>UCU Eats connects Mukono's best vendors with hungry students. Chapati, Rolex, chips, tea - delivered to your hostel in 20 minutes or less!</p>
+          <p>We understand student life is busy. That's why we've partnered with over 50 local vendors to bring you fresh, affordable food right when you need it. No more walking across campus when you're cramming for exams!</p>
+          
           <div class="features">
-            <div class="feature"><span>⚡</span> 20 min delivery</div>
-            <div class="feature"><span>💰</span> Student prices</div>
-            <div class="feature"><span>🍽️</span> 50+ vendors</div>
-            <div class="feature"><span>📱</span> Easy ordering</div>
+            <div class="feature">
+              <span class="feature-icon">⚡</span>
+              <div>
+                <h4>20 min delivery</h4>
+                <p>Lightning-fast service to your hostel</p>
+              </div>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">💰</span>
+              <div>
+                <h4>Student prices</h4>
+                <p>Affordable meals that fit your budget</p>
+              </div>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">🍽️</span>
+              <div>
+                <h4>50+ vendors</h4>
+                <p>Wide variety of local favorites</p>
+              </div>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">📱</span>
+              <div>
+                <h4>Easy ordering</h4>
+                <p>Simple, fast, and reliable platform</p>
+              </div>
+            </div>
           </div>
         </div>
+        
         <div class="about-stats">
           <div class="stat-card">
+            <div class="stat-emoji">📦</div>
             <h3>500+</h3>
             <p>Orders Daily</p>
           </div>
           <div class="stat-card">
+            <div class="stat-emoji">🛵</div>
             <h3>50+</h3>
             <p>Vendors</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-emoji">⭐</div>
+            <h3>4.8/5</h3>
+            <p>Rating</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-emoji">🎓</div>
+            <h3>1000+</h3>
+            <p>Students</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer"><!-- Same footer --></footer>
+  <!-- Back to Home -->
+  <div class="back-to-home">
+    <a href="index.html" class="btn-primary back-btn">
+      ← Back to Home
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 <span>UCU Eats</span> — Mukono's #1 Food Delivery <span>Arigato Asakusa</span> 🔥</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

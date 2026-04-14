@@ -4,39 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - UCU Eats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar"><!-- Same nav --></nav>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">UCU Eats 🔥</div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        <li><a href="vendor.html" class="nav-link">Vendor Deets</a></li>
+        <li><a href="#" class="nav-link btn-primary">Vendor Page</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
 
+  <!-- Contact Hero -->
   <section class="contact-hero">
     <div class="container">
       <h1 class="page-title">Contact Us</h1>
-      <p class="page-subtitle">Get in touch for orders or vendor inquiries</p>
+      <p class="page-subtitle">Get in touch for orders or vendor inquiries 📞</p>
     </div>
   </section>
 
+  <!-- Contact Content -->
   <section class="contact-content">
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info">
           <h3>📞 Quick Contact</h3>
+          
           <div class="contact-item">
-            <strong>Phone:</strong> 0772 123 456
+            <div class="contact-icon">📱</div>
+            <div>
+              <strong>Phone</strong>
+              <p>0772 123 456</p>
+            </div>
           </div>
+          
           <div class="contact-item">
-            <strong>Email:</strong> hello@ucueats.com
+            <div class="contact-icon">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <p>hello@ucueats.com</p>
+            </div>
           </div>
+          
           <div class="contact-item">
-            <strong>Location:</strong> Mukono University Area
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>Location</strong>
+              <p>Mukono University Area</p>
+            </div>
           </div>
+          
           <div class="contact-item">
-            <strong>Hours:</strong> 7AM - 11PM Daily
+            <div class="contact-icon">🕐</div>
+            <div>
+              <strong>Hours</strong>
+              <p>7AM - 11PM Daily</p>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">📘 Facebook</a>
+              <a href="#" class="social-link">📷 Instagram</a>
+              <a href="#" class="social-link">🐦 Twitter</a>
+            </div>
           </div>
         </div>
+
         <form class="contact-form">
+          <h3>Send us a message</h3>
           <input type="text" placeholder="Your Name" required>
           <input type="email" placeholder="Your Email" required>
+          <input type="text" placeholder="Subject (optional)">
           <textarea placeholder="Your Message" rows="5" required></textarea>
           <button type="submit" class="btn-primary">Send Message</button>
         </form>
@@ -44,7 +96,20 @@
     </div>
   </section>
 
-  <footer class="footer"><!-- Same footer --></footer>
+  <!-- Back to Home -->
+  <div class="back-to-home">
+    <a href="index.html" class="btn-primary back-btn">
+      ← Back to Home
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 <span>UCU Eats</span> — Mukono's #1 Food Delivery <span>Arigato Asakusa</span> 🔥</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
